@@ -22,22 +22,20 @@ html {
 body {
   /* Display & Box Model */
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  background: black;
+  /* Other */
+  background-color: hsl(0, 43%, 97.5%);
 }
 
 nav {
   /* Display & Box Model */
   width: 100%;
-  margin: 0 3rem;
   padding: 1rem;
 
   /* Other */
   font-size: 2rem;
   color: white;
+  background-color: black;
 }
 
 nav > ul {
@@ -76,6 +74,9 @@ nav > ul > li {
 
   /* Display & Box Model */
   display: none;
+
+  /* Other */
+  background-color: black;
 }
 
 .submenu > li {
