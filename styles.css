@@ -19,6 +19,87 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  /* Display & Box Model */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: black;
+}
+
+nav {
+  /* Display & Box Model */
+  width: 100%;
+  margin: 0 3rem;
+  padding: 1rem;
+
+  /* Other */
+  font-size: 2rem;
+  color: white;
+}
+
+nav > ul {
+  /* Display & Box Model */
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li:first-child {
+  /* Display & Box Model */
+  margin-right: auto;
+}
+
+nav > ul > li {
+  margin-left: 2rem;
+}
+
+nav > ul > li:nth-child(2) {
+  /* Positioning */
+  position: relative;
+}
+
+nav > ul > li:nth-child(2)::after {
+  /* Display & Box Model */
+  content: '▼';
+
+  /* Other */
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+nav > ul > li:hover {
+  /* Other */
+  cursor: pointer;
+}
+
+nav > ul > li:nth-child(2) > ul {
+  /* Positioning */
+  position: absolute;
+
+  /* Display & Box Model */
+  display: none;
+}
+
+nav > ul > li:nth-child(2) > ul > li {
+  /* Display & Box Model */
+  border-bottom: 1px solid white;
+
+  /* Other */
+  padding: 1rem .5rem 1rem;
+}
+
+nav > ul > li:nth-child(2):hover > ul {
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+
 /********************
 || Utilities
 *********************/
