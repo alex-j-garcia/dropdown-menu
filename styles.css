@@ -55,26 +55,22 @@ nav > ul > li {
   margin-left: 2rem;
 }
 
-nav > ul > li:nth-child(2) {
+.dropdown {
   /* Positioning */
   position: relative;
 }
 
-nav > ul > li:nth-child(2)::after {
+.dropdown::after {
   /* Display & Box Model */
   content: '▼';
 
   /* Other */
   font-size: 1rem;
   vertical-align: middle;
-}
-
-nav > ul > li:hover {
-  /* Other */
   cursor: pointer;
 }
 
-nav > ul > li:nth-child(2) > ul {
+.submenu {
   /* Positioning */
   position: absolute;
 
@@ -82,7 +78,7 @@ nav > ul > li:nth-child(2) > ul {
   display: none;
 }
 
-nav > ul > li:nth-child(2) > ul > li {
+.submenu > li {
   /* Display & Box Model */
   border-bottom: 1px solid white;
 
@@ -90,7 +86,7 @@ nav > ul > li:nth-child(2) > ul > li {
   padding: 1rem .5rem 1rem;
 }
 
-nav > ul > li:nth-child(2):hover > ul {
+.dropdown:hover > .submenu {
   display: block;
 }
 
