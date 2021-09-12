@@ -30,8 +30,8 @@ body {
 nav {
   /* Display & Box Model */
   width: 100%;
-  padding: 1rem;
-  min-width: 535px;
+  padding: 5rem 2rem;
+  min-width: 555px;
 
   /* Other */
   font-size: 2rem;
