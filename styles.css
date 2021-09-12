@@ -31,11 +31,12 @@ nav {
   /* Display & Box Model */
   width: 100%;
   padding: 1rem;
+  min-width: 535px;
 
   /* Other */
   font-size: 2rem;
-  color: white;
-  background-color: black;
+  color: hsl(212, 100%, 64%);
+  background: hsl(212, 95%, 92%);
 }
 
 nav > ul {
@@ -50,6 +51,7 @@ nav > ul > li:first-child {
 }
 
 nav > ul > li {
+  /* Display & Box Model */
   margin-left: 2rem;
 }
 
@@ -58,7 +60,16 @@ nav > ul > li {
   position: relative;
 }
 
-.dropdown::after {
+.dropdown > span {
+  /* Positioning */
+  position: relative;
+  z-index: 2;
+
+  /* Other */
+  cursor: pointer;
+}
+
+.dropdown >span::after {
   /* Display & Box Model */
   content: '▼';
 
@@ -71,12 +82,17 @@ nav > ul > li {
 .submenu {
   /* Positioning */
   position: absolute;
+  top: -10px;
+  left: -15px;
+  z-index: 1;
 
   /* Display & Box Model */
   display: none;
+  border-radius: 5px;
+  padding-top: 4rem;
 
   /* Other */
-  background-color: black;
+  background: hsl(212, 100%, 85%);
 }
 
 .submenu > li {
@@ -84,16 +100,29 @@ nav > ul > li {
   border-bottom: 1px solid white;
 
   /* Other */
-  padding: 1rem .5rem 1rem;
+  padding: 1rem 2rem 1rem;
+}
+
+.submenu >li:last-child {
+  /* Display & Box Model */
+  border: none;
 }
 
 .dropdown:hover > .submenu {
+  /* Display & Box Model */
   display: block;
 }
 
-nav a {
+nav a:link,
+nav a:visited {
+  /* Other */
   text-decoration: none;
-  color: white;
+  color: hsl(212, 100%, 64%);
+}
+
+nav a:hover {
+  /* Display & Box Model */
+  border-bottom: 1px solid hsl(212, 100%, 64%);
 }
 
 
